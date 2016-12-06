@@ -7,7 +7,6 @@ import {Router, Route, IndexRoute, Link, browserHistory } from 'react-router';
 import ViewQueues from './scripts/ViewQueues';
 import ViewGame from './scripts/ViewGame';
 
-//<Route path="game" component={GameRow}/>
 ReactDOM.render((
 	<Router history={browserHistory}>
     	<Route path="/" component={App}>
