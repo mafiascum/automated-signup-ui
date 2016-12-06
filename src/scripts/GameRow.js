@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { Link } from 'react-router';
 
 class GameRow extends Component {
 
@@ -7,16 +8,11 @@ class GameRow extends Component {
 		this.state = {};
 	}
 
-	gameClick = (e) => {
-		e.preventDefault();
-		this.props.loadGame();
-	}
-
 	render() {
 
 		return (
 				<tr>
-					<td><a onClick={this.gameClick} href="{this.props.url}">{this.props.name}</a></td>
+					<td><Link to={"/game/" + this.props.gameId}>{this.props.name}</Link></td>
 					<td>{this.props.type}</td>
 					<td>{this.props.status}</td>
 					<td>{this.props.moderators}</td>

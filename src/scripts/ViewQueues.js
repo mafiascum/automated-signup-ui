@@ -43,7 +43,8 @@ class ViewQueues extends Component {
 			var games = [];
 
 			for(var i = 0;i < 10;++i) {
-				games.push(<GameRow loadGame={this.props.loadGame} key={i} url="#" name={"Game #" + (i + 1)} type="Mini Theme" statu="Signups" moderators="Username" />);
+				var gameId = i + 1;
+				games.push(<GameRow loadGame={this.props.loadGame} key={i} gameId={gameId} name={"Game #" + gameId} type="Mini Theme" statu="Signups" moderators="Username" />);
 			}
 
 			this.setState({

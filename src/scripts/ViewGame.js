@@ -14,7 +14,7 @@ class ViewGame extends Component {
 	render() {
 
 		return (
-			<div>Game!</div>
+			<div>Game #{this.props.params.gameId}!</div>
 		);
 	}
 }

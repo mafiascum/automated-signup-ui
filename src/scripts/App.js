@@ -8,28 +8,17 @@ class App extends Component {
 
 	constructor() {
 		super();
-		this.state = {
-			activeNode: <ViewQueues key="viewQueues" loadGame={this.loadGame}/>
-		};
-	}
-
-	componentDidMount() {
-	}
-
-	loadGame = () => {
-		this.setState({
-			activeNode: <ViewGame key="viewGames"/>
-		});
+		this.state = {};
 	}
 
 	render() {
 
 		return (
 			<div id="main">
-				{this.state.activeNode}
+				{this.props.children}
 			</div>
 		);
 	}
 }
-
+//{this.state.activeNode}
 export default App;
