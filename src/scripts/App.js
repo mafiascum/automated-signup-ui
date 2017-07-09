@@ -1,8 +1,9 @@
-import React, { Component } from 'react';
-//import logo from './logo.svg';
-import '../styles/App.scss';
-import ViewQueues from './ViewQueues';
-import ViewGame from './ViewGame';
+import React, { Component } from 'react'
+import Navbar from './components/Navbar'
+import View from './components/View'
+import {
+  Route
+} from 'react-router-dom'
 
 class App extends Component {
 
@@ -12,12 +13,13 @@ class App extends Component {
 	}
 
 	render() {
-
 		return (
-			<div id="main">
-				{this.props.children}
-			</div>
-		);
+				<div>
+					<Navbar />
+
+          <Route path="/" component={View} />
+					</div>
+		)
 	}
 }
 //{this.state.activeNode}
