@@ -2,6 +2,7 @@ import React, { Component } from 'react'
 import Navbar from './components/Navbar'
 import View from './components/View'
 import Create from './components/Create'
+import Game from './components/Game'
 import {
   Route, Switch
 } from 'react-router-dom'
@@ -20,9 +21,10 @@ class App extends Component {
           <Switch>
             <Route exact path="/" component={View}/>
             <Route path="/queue" component={View}/>
+            <Route path="/game" component={Game}/>
             <Route path="/create" component={Create} />
           </Switch>
-					</div>
+				</div>
 		)
 	}
 }
